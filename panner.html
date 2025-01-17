@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+         .all {
+            padding: 0px;
+            margin: 0px;
+            height: 1700px;
+            width: 100%;
+            background-color: #0f1111;
+        }
+
+        .title {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            font-family: serif;
+            background-color: #0f1111;
+            color: white;
+            font-size: 4rem;
+            top: 50%;
+            left: 50%;
+        }
+
+        .photo {
+            height: 300px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo div {
+            opacity: 0;
+            transform: scale(0.5);
+            animation: popUp 1s forwards;
+        }
+
+        .photo div:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        
+        .photo div:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .photo div:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .photo div:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .photo div:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        @keyframes popUp {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .cont {
+            height: 600px;
+            width: 100%;
+            background-color: #0f1111;
+            color: white;
+        }
+        .maincont{
+          text-align: center;
+          font-size: 1.5rem;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>paneerrec</title>
+</head>
+<body>
+    <div class="all">
+    <div class="title">
+       PANEER
+    </div>
+    <div class="photo">
+        <div class="bir1">
+            <img src="pan1.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir2">
+            <img src="pan2.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir3">
+            <img src="pan3.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir4">
+            <img src="pan4.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir5">
+            <img src="panner.jpeg" style="height: 200px; width: 300px; ">
+        </div>
+    </div>
+    <div class="cont">
+        <h1 style="font-size: 2.7rem; text-align: center;">Welcome chef Let's start cooking......!</h1> 
+        <div class="maincont">
+            <h2>What all we need </h2>
+            
+            <p>Basmati Rice</p>
+            <p> Paneer (Cottage Cheese)</p>
+            <p> Onion</p>
+            <p>Tomato Puree</p>
+            <p> Cashew Nuts</p>
+              <p> Fresh Creamv
+                <p> Milk</p>
+                  <p> Butter/Ghee</p>
+                    <p> Ginger-Garlic Paste</p>
+                      <p> Spices (Turmeric, Garam Masala, Red Chili Powder)</p>
+                        <p> Coriander Leaves</p>
+                <div class="rec" style="text-align:inherit;">
+            <h2>How to cook</h2>
+            <p>Make Gravy: Sauté onions, ginger-garlic paste, and cashews in butter. Blend into a smooth paste.</p>
+            <p>  Cook Paste: Cook paste with tomato puree and spices.</p>
+              <p> Add Paneer: Add paneer cubes, cream, and milk. Simmer for 5-10 mins.</p>
+                <p> Garnish: Top with cream and coriander.</p>
+                  <p>Serve: Enjoy with naan or rice.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

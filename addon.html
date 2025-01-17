@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea,
+        form select,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        #difficulty label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #difficulty input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Add Your Recipe</h1>
+        <form action="/submit-recipe" method="POST" enctype="multipart/form-data">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipeName" placeholder="Enter recipe name" required>
+            
+            <label for="image-upload">Upload Image:</label>
+            <input type="file" id="image-upload" name="imageUpload" accept="image/*">
+            
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" rows="5" placeholder="List ingredients here..." required></textarea>
+            
+            <label for="steps">Preparation Steps:</label>
+            <textarea id="steps" name="steps" rows="8" placeholder="Describe the preparation steps..." required></textarea>
+            
+            <label for="cooking-time">Cooking Time (minutes):</label>
+            <input type="number" id="cooking-time" name="cookingTime" min="1" required>
+            
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="indian">Indian</option>
+                <option value="italian">Italian</option>
+                <option value="dessert">Dessert</option>
+                <option value="chinese">Chinese</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="difficulty">Difficulty Level:</label>
+            <div id="difficulty">
+                <input type="radio" id="easy" name="difficulty" value="easy">
+                <label for="easy">Easy</label>
+                <input type="radio" id="medium" name="difficulty" value="medium">
+                <label for="medium">Medium</label>
+                <input type="radio" id="hard" name="difficulty" value="hard">
+                <label for="hard">Hard</label>
+            </div>
+            
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags" placeholder="e.g., vegan, spicy, quick">
+            
+            <button type="submit">Submit Recipe</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>

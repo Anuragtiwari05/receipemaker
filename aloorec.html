@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+         .all {
+            padding: 0px;
+            margin: 0px;
+            height: 1700px;
+            width: 100%;
+            background-color: #0f1111;
+        }
+
+        .title {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            font-family: serif;
+            background-color: #0f1111;
+            color: white;
+            font-size: 4rem;
+            top: 50%;
+            left: 50%;
+        }
+
+        .photo {
+            height: 300px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo div {
+            opacity: 0;
+            transform: scale(0.5);
+            animation: popUp 1s forwards;
+        }
+
+        .photo div:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        
+        .photo div:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .photo div:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .photo div:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .photo div:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        @keyframes popUp {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .cont {
+            height: 600px;
+            width: 100%;
+            background-color: #0f1111;
+            color: white;
+        }
+        .maincont{
+          text-align: center;
+          font-size: 1.5rem;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>aloorec</title>
+</head>
+<body>
+    <div class="all">
+    <div class="title">
+       ALOO PARATHA 
+    </div>
+    <div class="photo">
+        <div class="bir1">
+            <img src="aloo1.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir2">
+            <img src="aloo2.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir3">
+            <img src="aloo3.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir4">
+            <img src="aloo4.jpg" style="height: 200px; width: 300px;">
+        </div>
+        <div class="bir5">
+            <img src="aloo.jpeg" style="height: 200px; width: 300px; ">
+        </div>
+    </div>
+    <div class="cont">
+        <h1 style="font-size: 2.7rem; text-align: center;">Welcome chef Let's start cooking......!</h1> 
+        <div class="maincont">
+            <h2>What all we need </h2>
+            
+            <p>Boiled potatoes (mashed)</p>
+                <p>  Chopped green chilies</p>
+                    <p>   Finely chopped coriander leaves</p> 
+                        <p>   Cumin powder</p>
+                            <p>  Garam masala</p>
+                                <p>  Amchur (dry mango powder)</p>
+                                    <p>  Salt</p>
+                <div class="rec" style="text-align:inherit;">
+            <h2>How to cook</h2>
+            <p>Prepare Dough:
+
+                  Mix wheat flour, salt, and water. Knead into a soft dough. Rest for 20 minutes..</p>
+                </p>Make Filling:
+                Mix mashed potatoes, green chilies, coriander, cumin powder, garam masala, amchur, and salt..</p>
+                </p> Assemble Paratha:
+                Divide dough into balls. Roll out one ball, place filling in the center, and seal. Flatten gently..</p>
+                </p>Cook:
+               Heat a tawa. Cook paratha on both sides with oil/ghee until golden spots appear...</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
